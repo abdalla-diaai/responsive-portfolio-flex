@@ -1,0 +1,85 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+}
+/* 
+BY DEFAULT: FLEX IS GOING IN A ROW DIRECTION
+THE MAIN AXIS WILL ALWAYS BE JUSTIFY-CONTENT
+THE CROSS AXIS WILL ALWAYS BE ALIGN-ITEMS
+*/
+
+#container{
+    background-color: green;
+    height: 50vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+
+#container > img {
+    height:100%;
+    width:100%
+}
+
+#container h1{
+    position: absolute;
+    top: 50%;
+}
+#landing {
+    background-color: red;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-image: url("./assets/images/02-hero-bg.jpg");
+    background-size: cover;
+}
+
+aside{
+    background-color: beige;
+    width: 85%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+}
+
+#landing h1 {
+    background-color: green;
+    width:40%;
+}
+
+#landing div {
+    background-color: orange;
+    width:40%;
+    height: 40%;
+}
+
+
+#barrier {
+    width: 1.5%;
+    background-color: purple;
+    height: 100%
+}
+#hero-2{
+    background-color: blue;
+    height:100vh
+}
+
+#hero-2 > div {
+    height: 200px;
+    background-color: green;
+}
+#hero-3{
+    background-color: yellow;
+    height: 50vh;
+}
+
+/* 
+margin-horizontal = BAD
+height-specified = not great
+font-size: px, rem, em
+*/
