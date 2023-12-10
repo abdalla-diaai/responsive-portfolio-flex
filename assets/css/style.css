@@ -36,7 +36,6 @@ h1 {
   align-items: center;
   padding-inline-start: 25px;
   font-size: large;
-
 }
 
 nav {
@@ -133,10 +132,10 @@ ul {
 }
 
 #top {
-  background-image: url("../images/wood.jpeg");
+  background-image: url("../images/earth-banner.png");
   background: cover;
   background-repeat: no-repeat;
-  height: 150px;
+  border: 5px solid aqua;
 }
 
 #middle {
@@ -175,11 +174,10 @@ ul {
 #middle-right,
 #bottom-left,
 #bottom-right {
-  height: 200px;
+  height: 150px;
   background-size: cover;
   padding: 10px;
   border: 5px solid aqua;
-
 }
 
 
