@@ -36,17 +36,19 @@ p {
     line-height: 1.25;
 }
 
-.image-caption {
+.section-text {
     background-color: rgba(255, 255, 255, 0.8);
     border-bottom: 5px solid grey;
     position: relative;
-    /* right: -50px;
-    top: 100px; */
     padding: 25px;
     max-width: 70%;
     z-index: 100;
     margin-block-start: 100px;
     margin-inline-start: 15%;
+    text-align: center;
+}
+input {
+    max-width: 100%;
 }
 
 h1 {
