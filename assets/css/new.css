@@ -17,7 +17,7 @@ p {
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    height: 100vh;
+    height: 90vh;
     padding: 20px;
 }
 
@@ -26,44 +26,7 @@ header {
     flex-direction: row;
     background-color: black;
     border-radius: 5px;
-}
-
-p {
-    font-size: 16px;
-    text-align: left;
-    padding: 20px;
-    overflow-wrap: break-word;
-    line-height: 1.25;
-}
-
-.section-text {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-bottom: 5px solid grey;
-    position: relative;
-    padding: 25px;
-    max-width: 70%;
-    z-index: 100;
-    margin-block-start: 100px;
-    margin-inline-start: 15%;
-    text-align: center;
-}
-input {
     max-width: 100%;
-}
-
-h1 {
-    flex-basis: 35%;
-    display: flex;
-    align-items: center;
-    padding-inline-start: 25px;
-    font-size: 1.5rem;
-    color: white;
-
-}
-
-h3,
-h4 {
-    padding: 5px;
 }
 
 nav {
@@ -84,16 +47,41 @@ ul {
     flex-grow: 1;
 }
 
+h1 {
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 25px;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+h3,
+h4 {
+    padding: 5px;
+}
+
+p {
+    font-size: 16px;
+    text-align: left;
+    padding: 20px;
+    overflow-wrap: break-word;
+    line-height: 1.25;
+}
+
 #grid-container {
     display: grid;
     max-inline-size: 100%;
     gap: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     grid-template-areas: "about-me about-me"
         "website-1 website-2"
-        "website-3 website-4";
+        "website-3 contact-form";
     grid-template-rows: auto 300px 300px;
     grid-template-columns: 1fr 1fr;
+    padding-block-start: 10px;
+    padding-block-end: 10px;
 }
 
 #about-me {
@@ -103,6 +91,31 @@ ul {
     border-radius: 5px;
     background-image: url("../images/rainbow.webp");
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about-me-text-large,
+#about-me-text-small {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 5px solid grey;
+    position: relative;
+    padding: 25px;
+    max-width: 70%;
+    z-index: 100;
+    margin-block-start: 30px;
+    margin-block-end: 30px;
+    margin-inline-start: 15%;
+    text-align: center;
+    position: relative;
+}
+
+#about-me-text-small {
+    visibility: hidden;
+}
+
+#profile-image {
+    max-width: 15%;
+    padding: 10px;
 }
 
 #website-1 {
@@ -126,28 +139,46 @@ ul {
     background-repeat: no-repeat;
 }
 
-#website-4 {
-    grid-area: website-4;
+#contact-form {
+    grid-area: contact-form;
     background-image: url("../images/02-portfolio-4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#profile {
-    max-width: 20%;
-    height: auto;
-    padding: 10px;
-}
-
 #website-1,
 #website-2,
 #website-3,
-#website-4 {
+#contact-form {
     text-align: center;
     border: solid black 1px;
     border-radius: 5px;
 }
 
+.section-text {
+    margin-block-start: 100px;
+}
+
+#form-text,
+.section-text {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 5px solid grey;
+    position: relative;
+    padding: 10%;
+    max-width: 70%;
+    z-index: 100;
+    margin-inline-start: 15%;
+    text-align: center;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    max-height: 100%;
+    display: block;
+    resize: vertical;
+}
 
 footer {
     margin-block-end: 10px;
@@ -169,12 +200,16 @@ footer a:hover {
     cursor: pointer;
 }
 
-footer h4 {
+footer h5 {
     padding-inline-start: 25px;
 }
 
-#contact-links {
+#contact {
     margin-inline-end: 25px;
+}
+
+.footer-links {
+    font-size: small;
 }
 
 @media only screen and (max-width: 637px) {
@@ -185,6 +220,14 @@ footer h4 {
     h1 {
         flex-grow: 1;
         justify-content: center;
+    }
+
+    #about-me-text-small {
+        visibility: visible;
+    }
+
+    #about-me-text-large {
+        display: none;
     }
 
     p {
@@ -200,18 +243,25 @@ footer h4 {
         align-items: center;
     }
 
-    .hide-link,
-    #footer-h3 {
+    .footer-links {
         display: none;
+    }
+
+    #profile-image {
+        max-width: 40%;
+    }
+
+    body {
+        padding: 0px;
     }
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 638px) and (max-width: 1000px) {
     #grid-container {
         grid-template-areas: "about-me website-1"
             "website-2 website-2"
-            "website-3 website-4";
+            "website-3 contact-form";
     }
 
     body {

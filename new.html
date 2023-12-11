@@ -16,17 +16,19 @@
                 <li>About me</li>
                 <li>Work</li>
                 <li>Publications</li>
-                <li>Contact me</li>
             </ul>
         </nav>
     </header>
     <main id="grid-container">
         <div id="about-me">
-            <img id="profile" src="./assets/images/penguin-2.png" alt="superhero penguin">
+            <img id="profile-image" src="./assets/images/penguin-2.png" alt="superhero penguin">
             <h3>Abdalla Mohamed</h3>
             <h4>Freelance Web Developer</h4>
-            <p class="section-text">
-                Senior Scientist with 10+ years of experience applying in-depth knowledge of signaling pathways, cancer/molecular biology and CRISPR in drug discovery projects, passionate about programming, currently enrolled in edX bootcamp to become a web developer.
+            <p id="about-me-text-large">
+                Molecular Biologist with 10+ years of experience applying in-depth knowledge of signaling pathways, cancer/molecular biology and CRISPR in drug discovery projects, passionate about programming, currently enrolled in edX bootcamp to become a web developer.
+            </p>
+            <p id="about-me-text-small">
+                Passionate about programming, currently enrolled in edX bootcamp to become a web developer.
             </p>
         </div>
         <div id="website-1">
@@ -40,21 +42,22 @@
             <p class="section-text">Placeholder.</p>
             
         </div>
-        <div id="website-4">
-            <form class="section-text" action="#" method="post" target="_blank">
+        <div id="contact-form">
+            <h4>Get in Touch</h4>
+            <form id="form-text" action="#" method="post" target="_blank">
                 <input type="text" placeholder="Full name">
                 <input type="text" placeholder="Email">
-                <button type="button">Submit</button>
+                <textarea placeholder="Message" name="message" id="" cols="30" rows="5"></textarea>
+                <button type="button">Send</button>
             </form>
         </div>
     </main>
-    <footer id="contact-me">
-        <h4 id="footer-h3">Contact Me</h4>
-        <div id="contact-links">
-            <a class="hide-link" href="https://github.com/abdalla-diaai">GitHub</a>
-            <a class="hide-link" href="https://www.linkedin.com/in/abdalla-diaai-mohamed-434096218/">LinkedIn</a>
-            <a class="hide-link" href="https://www.ncbi.nlm.nih.gov/myncbi/abdalla.mohamed.1/bibliography/public/">Pubmed</a>
-            <a href="#">Contact</a>
+    <footer>
+        <h5>About Tuxedo</h5>
+        <div id="contact">
+            <a class="footer-links" href="https://github.com/abdalla-diaai">GitHub</a>
+            <a class="footer-links" href="https://www.linkedin.com/in/abdalla-diaai-mohamed-434096218/">LinkedIn</a>
+            <a class="footer-links" href="https://www.ncbi.nlm.nih.gov/myncbi/abdalla.mohamed.1/bibliography/public/">Pubmed</a>
         </div>
     </footer>
 </body>
