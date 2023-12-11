@@ -269,7 +269,7 @@ footer p {
 }
 
 /* iPad mini 768px and bigger or similar */
-@media only screen and (min-width: 701px) and (max-width: 1020px) {
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
     #grid-container {
         grid-template-areas: "about-me about-me website-1 website-1"
             "website-2 website-2 website-2 website-2"
@@ -292,7 +292,7 @@ footer p {
 }
 
 /* laptop and larger screens */
-@media only screen and (min-width: 1021px) {
+@media only screen and (min-width: 1025px) {
     #grid-container {
         grid-template-areas: "about-me about-me about-me about-me"
             "about-me about-me about-me about-me"
