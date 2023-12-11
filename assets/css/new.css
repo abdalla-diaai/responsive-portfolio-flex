@@ -36,6 +36,19 @@ p {
     line-height: 1.25;
 }
 
+.image-caption {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 5px solid grey;
+    position: relative;
+    /* right: -50px;
+    top: 100px; */
+    padding: 25px;
+    max-width: 70%;
+    z-index: 100;
+    margin-block-start: 100px;
+    margin-inline-start: 15%;
+}
+
 h1 {
     flex-basis: 35%;
     display: flex;
@@ -45,9 +58,12 @@ h1 {
     color: white;
 
 }
-h3, h4 {
+
+h3,
+h4 {
     padding: 5px;
 }
+
 nav {
     flex-basis: 60%;
     position: relative;
@@ -70,10 +86,12 @@ ul {
     display: grid;
     max-inline-size: 100%;
     gap: 10px;
-    padding:10px;
+    padding: 10px;
     grid-template-areas: "about-me about-me"
         "website-1 website-2"
         "website-3 website-4";
+    grid-template-rows: auto 300px 300px;
+    grid-template-columns: 1fr 1fr;
 }
 
 #about-me {
@@ -87,18 +105,30 @@ ul {
 
 #website-1 {
     grid-area: website-1;
+    background-image: url("../images/Horiseon-deployed-screenshot.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #website-2 {
     grid-area: website-2;
+    background-image: url("../images/Landing-page.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #website-3 {
     grid-area: website-3;
+    background-image: url("../images/02-run-buddy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #website-4 {
     grid-area: website-4;
+    background-image: url("../images/02-portfolio-4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #profile {
@@ -114,25 +144,8 @@ ul {
     text-align: center;
     border: solid black 1px;
     border-radius: 5px;
-    height: max-content;
 }
 
-#website-1 img,
-#website-2 img,
-#website-3 img,
-#website-4 img {
-    max-width: 60%;
-    max-height: auto;
-    padding: 20px;
-}
-
-#website-1 img:hover, 
-#website-2 img:hover,
-#website-3 img:hover,
-#website-4 img:hover {
-    cursor: pointer;
-    transform: scale(1.5);
-}
 
 footer {
     margin-block-end: 10px;
@@ -161,10 +174,12 @@ footer h4 {
 #contact-links {
     margin-inline-end: 25px;
 }
+
 @media only screen and (max-width: 637px) {
     nav {
         display: none;
     }
+
     h1 {
         flex-grow: 1;
         justify-content: center;
@@ -173,6 +188,7 @@ footer h4 {
     p {
         font-size: 14px;
     }
+
     footer a {
         font-size: 12px;
     }
@@ -181,7 +197,9 @@ footer h4 {
         justify-content: center;
         align-items: center;
     }
-    #contact-links {
+
+    .hide-link,
+    #footer-h3 {
         display: none;
     }
 
@@ -193,6 +211,7 @@ footer h4 {
             "website-2 website-2"
             "website-3 website-4";
     }
+
     body {
         padding: 50px;
     }
