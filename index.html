@@ -1,76 +1,61 @@
 <!DOCTYPE html>
-<html lang="en-gb">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lernantino // Web Developer</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Tuxedo Portfolio</title>
 </head>
 
 <body>
-  <!-- main logo / nav -->
-  <header>
-    <h1>Lernantino</h1>
-    <nav>
-      <ul>
-        <li>About me</li>
-        <li>Work</li>
-        <li>Publications</li>
-        <li>Contact me</li>
-      </ul>
-    </nav>
-  </header>
-  <!-- hero banner -->
-  <section class="hero-banner">
-    <h2>Cool subtitle here!</h2>
-  </section>
-
-  <main class="page-wrapper">
-    <!-- about me -->
-    <section class="page-section" id="about">
-      <h2 class="second-heading">About Me</h2>
-      <p>
-        Senior Scientist with 10+ years of experience applying in-depth knowledge of signaling pathways,
-        cancer/molecular biology and CRISPR in drug discovery projects.
-      </p>
-    </section>
-
-    <!-- portfolio container -->
-    <section class="page-section" id="work">
-      <h2 class="second-heading">Work</h2>
-      <div id="images-section">
-        <div id="top">
-          <h2>top</h2>
+    <header>
+        <h1>Tuxedo</h1>
+        <nav>
+            <ul>
+                <li><a class="nav-links" href="#contact-form">Contact Me</a></li>
+                <li><a class="nav-links" href="https://github.com/abdalla-diaai">GitHub</a></li>
+                <li><a class="nav-links" href="https://www.linkedin.com/in/abdalla-diaai-mohamed-434096218/">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="grid-container">
+        <div id="about-me">
+            <img id="profile-image" src="./assets/images/penguin-2.png" alt="superhero penguin">
+            <h3>Abdalla Mohamed</h3>
+            <h4>Freelance Web Developer</h4>
+            <p id="about-me-text-large">
+                Molecular Biologist with 10+ years of experience applying in-depth knowledge of signaling pathways, cancer/molecular biology and CRISPR in drug discovery projects, passionate about programming, currently enrolled in edX bootcamp to become a web developer.
+            </p>
+            <p id="about-me-text-small">
+                Passionate about programming, currently enrolled in edX bootcamp to become a web developer.
+            </p>
         </div>
-        <div id="middle">
-          
-          <div id="middle-left">
-            <h4>middle</h4>
-          </div>
-          <div id= "middle-right">
-            <h4>middle</h4>
-          </div>
+        <div id="website-1">
+            <p class="section-text">Code refactor website.</p>
+            
         </div>
-        <div id="bottom">
-          
-          <div id="bottom-left">
-            <h4>bottom</h4>
-          </div>
-          <div id="bottom-right">
-            <h4>bottom</h4>
-          </div>
+        <div id="website-2">
+            <p class="section-text">Grid template website.</p>
         </div>
-      </div>
-
-    </section>
-
-    <!-- contact -->
-    <section class="page-section contact" id="contact">
-      <h2 class="second-heading">Contact Me</h2>
-    </section>
-  </main>
+        <div id="website-3">
+            <p class="section-text">Placeholder.</p>
+            
+        </div>
+        <div id="contact-form">
+            <h4>Get in Touch</h4>
+            <form id="form-text" action="#" method="post" target="_blank">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email">
+                <textarea placeholder="Message" name="message" id="" cols="30" rows="5"></textarea>
+                <button type="button">Send</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h5>About Tuxedo</h5>
+        <p>With ❤️ by Skipper 🐧</p>
+    </footer>
 </body>
 
 </html>

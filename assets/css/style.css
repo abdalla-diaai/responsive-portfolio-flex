@@ -1,158 +1,309 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  border: solid 1px black;
-  margin-block-end: 10px;
-}
-
+/* resetting all margins and padding */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+    margin: 0;
 }
 
 p {
-  margin: 0;
+    margin: 0;
 }
 
-h1 {
-  flex-basis: 35%;
-  display: flex;
-  align-items: center;
-  padding-inline-start: 25px;
+/* setting up viewport height, padding and fonts */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 90vh;
+    padding: 20px;
+}
 
+/* setting up header in flex display */
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    border-radius: 5px;
+    max-width: 100%;
 }
 
 nav {
-  flex-basis: 60%;
-  position: relative;
+    flex-basis: 60%;
+    position: relative;
+    color: wheat;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: wheat;
 }
 
 li {
-  list-style-type: none;
-  padding-inline-start: 15px;
-  font-size: 1rem;
+    list-style-type: none;
+    padding-inline-start: 15px;
+    font-size: 1rem;
 }
 
 ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
 
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
+h1 {
+    flex-basis: 35%;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 25px;
+    font-size: 1.5rem;
+    color: white;
 
 }
 
-.hero-banner {
-  display: flex;
-  flex-basis: 90%;
-  border: solid;
-  padding: 25px;
-  background-image: url("../images/rainbow.webp");
-  height: 25vh;
-  background-repeat: no-repeat;
-  background-size: 100px 300px;
-  justify-content: flex-end;
-  background-size: cover;
+h3,
+h4 {
+    padding: 5px;
 }
 
-.second-heading {
+p {
+    font-size: 16px;
+    text-align: left;
+    padding: 20px;
+    overflow-wrap: break-word;
+    line-height: 1.25;
+}
 
-  flex-basis: 20%;
-  border-inline-end: 1px solid blue;
+/* grid container for main content */
+#grid-container {
+    display: grid;
+    max-inline-size: 100%;
+    gap: 10px;
+    /* padding: 10px; */
+    grid-template-areas: "about-me about-me"
+        "website-1 website-2"
+        "website-3 contact-form";
+    grid-template-rows: auto 300px 300px;
+    grid-template-columns: 1fr 1fr;
+    padding-block-start: 10px;
+    padding-block-end: 10px;
+}
+
+#about-me {
+    grid-area: about-me;
+    border: solid black 1px;
+    text-align: center;
+    border-radius: 5px;
+    background-image: url("../images/rainbow.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#about-me-text-large,
+#about-me-text-small {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 5px solid grey;
+    position: relative;
+    padding: 25px;
+    max-width: 70%;
+    z-index: 100;
+    margin-block-start: 30px;
+    margin-block-end: 30px;
+    margin-inline-start: 15%;
+    text-align: center;
+    position: relative;
+}
+
+#about-me-text-small {
+    visibility: hidden;
+}
+
+#profile-image {
+    max-width: 15%;
+    padding: 10px;
+}
+
+#website-1 {
+    grid-area: website-1;
+    background-image: url("../images/Horiseon-deployed-screenshot.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#website-2 {
+    grid-area: website-2;
+    background-image: url("../images/Landing-page.png");
+}
+
+#website-3 {
+    grid-area: website-3;
+    background-image: url("../images/02-run-buddy.jpg");
+}
+
+#contact-form {
+    grid-area: contact-form;
+    background-image: url("../images/02-portfolio-4.jpg");
+}
+
+#website-1,
+#website-2,
+#website-3,
+#contact-form {
+    text-align: center;
+    border: solid black 1px;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* 
+enlarge background on hover */
+#website-1:hover, #website-2:hover, #website-3:hover {
+    transition: all 5s;
+    background-size: 150%;
+    cursor: pointer;
+}
+
+.section-text {
+    margin-block-start: 100px;
+}
+
+#form-text,
+.section-text {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 5px solid grey;
+    position: relative;
+    padding: 10%;
+    max-width: 70%;
+    max-height: 70%;
+    z-index: 100;
+    margin-inline-start: 15%;
+    text-align: center;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    max-height: 100%;
+    display: block;
+    resize: vertical;
+}
+
+textarea {
+    resize: none;
+}
+
+footer {
+    margin-block-end: 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+footer h5 {
+    padding-inline-start: 25px;
+}
+
+/* iPhone SE 320px 15 pro-max 430px or similar*/
+@media only screen and (max-width: 700px) {
+    nav {
+        display: none;
+    }
+
+    h1 {
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    #about-me-text-small {
+        visibility: visible;
+    }
+
+    #about-me-text-large {
+        display: none;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    footer a {
+        font-size: 12px;
+    }
+
+    footer {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    #profile-image {
+        max-width: 40%;
+    }
+
+    body {
+        padding: 0px;
+    }
 
 }
 
-.page-section p {
+/* iPad mini 768px and bigger or similar */
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+    #grid-container {
+        grid-template-areas: "about-me website-1"
+            "website-2 website-2"
+            "website-3 contact-form";
+    }
 
-  margin-inline-start: 25px;
-  flex-basis: 60%;
-  flex-grow: 1;
-  text-align: justify;
-  margin-inline-end: 10px;
-  word-spacing: -2px;
+    #about-me-text-small {
+        visibility: visible;
+    }
+
+    #about-me-text-large {
+        display: none;
+    }
+
+    #profile-image {
+        max-width: 40%;
+    }
 }
+/* laptop and larger screens */
+@media only screen and (min-width: 1030px) {
+    #grid-container {
+        grid-template-areas: "about-me website-1"
+            "website-2 website-2"
+            "website-3 contact-form";
+    }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-block-start: 10px;
-  border: solid 1px red;
-}
+    body {
+        padding: 50px;
+    }
 
-.page-section {
-  display: flex;
-  margin-inline-start: 25px;
+    #grid-container {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
 
-}
+    #profile-image {
+        max-width: 40%;
+    }
 
-#work {
-  display: flex;
-  flex-direction: row;
-}
+    h1, p {
+        font-size: 3rem;
+    }
 
-div {
-  border: solid 1px black;
-}
-
-#images-section {
-
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-
-}
-
-#top, #middle, #bottom {
-  display: flex;
-  
-}
-
-#top {
-  background-image: url("../images/wood.jpeg");
-  background: cover;
-  background-repeat: no-repeat;
-  height: 10vh;
-}
-
-#middle {
-  flex-direction: column;
-  background-size: cover;
-  width: 100%;
-  height: 200px;
-}
-
-#bottom {
-  flex-direction: column;
-  background-image: url("../images/02-portfolio-4.jpg");
-  background-size: cover;
-  width: 100%;
-}
-#middle-left {
-  background-image: url("../images/houses.webp");
-}
-#middle-right {
-background-image: url("../images/02-run-buddy.jpg");
-}
-#middle-left, #middle-right, #bottom-left, #bottom-right {
-  height: 200px;
-}
-
-@media only screen and (max-width: 637px) {
-  nav {
-    display: none;
-  }
+    h3, h4, h5, p, li a {
+        font-size: 2rem;
+    }
 }
