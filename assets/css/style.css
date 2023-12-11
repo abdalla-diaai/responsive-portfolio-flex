@@ -33,13 +33,13 @@ header {
 }
 
 nav {
-    flex-basis: 60%;
+    flex-basis: 64%;
     position: relative;
     color: wheat;
 }
 
 nav a {
-    padding: 10px;
+    padding: 20px;
     text-decoration: none;
     color: wheat;
 }
@@ -118,7 +118,7 @@ a {
     padding: 25px;
     max-width: 70%;
     z-index: 100;
-    margin-block-start: 30px;
+    margin-block-start: 10px;
     margin-block-end: 30px;
     margin-inline-start: 15%;
     text-align: center;
@@ -178,7 +178,7 @@ enlarge background on hover */
 }
 
 .section-text {
-    margin-block-start: 100px;
+    margin-block-start: 50px;
 }
 
 #form-text,
@@ -186,7 +186,7 @@ enlarge background on hover */
     background-color: rgba(255, 255, 255, 0.7);
     border-bottom: 5px solid grey;
     position: relative;
-    padding: 10%;
+    padding: 5%;
     max-width: 70%;
     max-height: 70%;
     z-index: 100;
@@ -213,13 +213,12 @@ footer {
     border-radius: 5px;
     color: whitesmoke;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 10px;
 }
 
-footer h5 {
-    padding-inline-start: 25px;
+footer p {
+    margin-inline-end: 30px;
 }
 
 /* iPhone SE 320px 15 pro-max 430px or similar*/
@@ -274,6 +273,7 @@ footer h5 {
     #grid-container {
         grid-template-areas: "about-me about-me website-1 website-1"
             "website-2 website-2 website-2 website-2"
+            "website-2 website-2 website-2 website-2"
             "website-3 website-3 contact-form contact-form";
         max-height: 90vh;
     }
@@ -295,9 +295,9 @@ footer h5 {
 @media only screen and (min-width: 1021px) {
     #grid-container {
         grid-template-areas: "about-me about-me about-me about-me"
+            "about-me about-me about-me about-me"
             "website-1 website-1 website-2 website-2"
             "website-3 website-3 contact-form contact-form";
-        grid-template-rows: auto auto auto auto;
     }
 
     body {
