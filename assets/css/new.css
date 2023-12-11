@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-
+/* resetting all margins and padding */
 h1,
 h2,
 h3,
@@ -15,12 +15,14 @@ p {
     margin: 0;
 }
 
+/* setting up viewport height, padding and fonts */
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 90vh;
     padding: 20px;
 }
 
+/* setting up header in flex display */
 header {
     display: flex;
     flex-direction: row;
@@ -76,6 +78,7 @@ p {
     line-height: 1.25;
 }
 
+/* grid container for main content */
 #grid-container {
     display: grid;
     max-inline-size: 100%;
@@ -134,22 +137,16 @@ p {
 #website-2 {
     grid-area: website-2;
     background-image: url("../images/Landing-page.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #website-3 {
     grid-area: website-3;
     background-image: url("../images/02-run-buddy.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #contact-form {
     grid-area: contact-form;
     background-image: url("../images/02-portfolio-4.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #website-1,
@@ -159,6 +156,15 @@ p {
     text-align: center;
     border: solid black 1px;
     border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* 
+enlarge background on hover */
+#website-1:hover, #website-2:hover, #website-3:hover {
+    transition: all 5s;
+    background-size: 150%;
+    cursor: pointer;
 }
 
 .section-text {
@@ -172,6 +178,7 @@ p {
     position: relative;
     padding: 10%;
     max-width: 70%;
+    max-height: 70%;
     z-index: 100;
     margin-inline-start: 15%;
     text-align: center;
@@ -185,9 +192,11 @@ button {
     display: block;
     resize: vertical;
 }
+
 textarea {
     resize: none;
 }
+
 footer {
     margin-block-end: 10px;
     background-color: black;
@@ -203,7 +212,8 @@ footer h5 {
     padding-inline-start: 25px;
 }
 
-@media only screen and (max-width: 637px) {
+/* iPhone SE 320px 15 pro-max 430px or similar*/
+@media only screen and (max-width: 700px) {
     nav {
         display: none;
     }
@@ -248,7 +258,28 @@ footer h5 {
 
 }
 
-@media only screen and (min-width: 638px) and (max-width: 1000px) {
+/* iPad mini 768px and bigger or similar */
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
+    #grid-container {
+        grid-template-areas: "about-me website-1"
+            "website-2 website-2"
+            "website-3 contact-form";
+    }
+
+    #about-me-text-small {
+        visibility: visible;
+    }
+
+    #about-me-text-large {
+        display: none;
+    }
+
+    #profile-image {
+        max-width: 40%;
+    }
+}
+/* laptop and larger screens */
+@media only screen and (min-width: 1030px) {
     #grid-container {
         grid-template-areas: "about-me website-1"
             "website-2 website-2"
@@ -257,5 +288,22 @@ footer h5 {
 
     body {
         padding: 50px;
+    }
+
+    #grid-container {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #profile-image {
+        max-width: 40%;
+    }
+
+    h1, p {
+        font-size: 3rem;
+    }
+
+    h3, h4, h5, p, li a {
+        font-size: 2rem;
     }
 }
