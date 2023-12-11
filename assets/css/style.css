@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 /* resetting all margins and padding */
 h1,
 h2,
@@ -18,7 +19,7 @@ p {
 /* setting up viewport height, padding and fonts */
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    height: 90vh;
+    height: 100vh;
     padding: 20px;
 }
 
@@ -82,17 +83,19 @@ a {
     text-decoration: none;
     color: black;
 }
+
 /* grid container for main content */
 #grid-container {
     display: grid;
     max-inline-size: 100%;
     gap: 10px;
     /* padding: 10px; */
-    grid-template-areas: "about-me about-me"
-        "website-1 website-2"
-        "website-3 contact-form";
-    grid-template-rows: auto 300px 300px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "about-me about-me about-me about-me"
+        "about-me about-me about-me about-me"
+        "website-1 website-1 website-2 website-2"
+        "website-3 website-3 contact-form contact-form";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-block-start: 10px;
     padding-block-end: 10px;
 }
@@ -163,9 +166,12 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 /* 
 enlarge background on hover */
-#website-1:hover, #website-2:hover, #website-3:hover {
+#website-1:hover,
+#website-2:hover,
+#website-3:hover {
     transition: all 5s;
     background-size: 150%;
     cursor: pointer;
@@ -217,7 +223,8 @@ footer h5 {
 }
 
 /* iPhone SE 320px 15 pro-max 430px or similar*/
-@media only screen and (max-width: 700px) {
+
+@media only screen and (min-width: 320px) and (max-width: 700px) {
     nav {
         display: none;
     }
@@ -263,11 +270,12 @@ footer h5 {
 }
 
 /* iPad mini 768px and bigger or similar */
-@media only screen and (min-width: 701px) and (max-width: 1024px) {
+@media only screen and (min-width: 701px) and (max-width: 1020px) {
     #grid-container {
-        grid-template-areas: "about-me website-1"
-            "website-2 website-2"
-            "website-3 contact-form";
+        grid-template-areas: "about-me about-me website-1 website-1"
+            "website-2 website-2 website-2 website-2"
+            "website-3 website-3 contact-form contact-form";
+        max-height: 90vh;
     }
 
     #about-me-text-small {
@@ -282,32 +290,34 @@ footer h5 {
         max-width: 40%;
     }
 }
+
 /* laptop and larger screens */
-@media only screen and (min-width: 1030px) {
+@media only screen and (min-width: 1021px) {
     #grid-container {
-        grid-template-areas: "about-me website-1"
-            "website-2 website-2"
-            "website-3 contact-form";
+        grid-template-areas: "about-me about-me about-me about-me"
+            "website-1 website-1 website-2 website-2"
+            "website-3 website-3 contact-form contact-form";
+        grid-template-rows: auto auto auto auto;
     }
 
     body {
         padding: 50px;
     }
 
-    #grid-container {
-        grid-template-rows: auto auto auto;
-        grid-template-columns: 1fr 1fr;
-    }
-
     #profile-image {
         max-width: 40%;
     }
 
-    h1, p {
+    h1,
+    p {
         font-size: 3rem;
     }
 
-    h3, h4, h5, p, li a {
+    h3,
+    h4,
+    h5,
+    p,
+    li a {
         font-size: 2rem;
     }
 }
