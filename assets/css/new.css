@@ -35,6 +35,12 @@ nav {
     color: wheat;
 }
 
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: wheat;
+}
+
 li {
     list-style-type: none;
     padding-inline-start: 15px;
@@ -179,7 +185,9 @@ button {
     display: block;
     resize: vertical;
 }
-
+textarea {
+    resize: none;
+}
 footer {
     margin-block-end: 10px;
     background-color: black;
@@ -188,28 +196,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-footer a {
     padding: 10px;
-    text-decoration: none;
-    color: wheat;
-}
-
-footer a:hover {
-    cursor: pointer;
 }
 
 footer h5 {
     padding-inline-start: 25px;
-}
-
-#contact {
-    margin-inline-end: 25px;
-}
-
-.footer-links {
-    font-size: small;
 }
 
 @media only screen and (max-width: 637px) {
