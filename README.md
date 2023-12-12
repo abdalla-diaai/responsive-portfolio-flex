@@ -24,7 +24,7 @@ The site displays correctly on iPhone SE, surface pro tablet and wide display sc
 
 ![wide-screen-display](https://github.com/abdalla-diaai/responsive-portfolio-flex/assets/56742529/5921a8cd-4c11-4a12-b86f-aea469e60f65)
 
-"Link of deployed site on github" (https://abdalla-diaai.github.io/responsive-portfolio-flex/)
+"Link of deployed site on github" (https://abdalla-diaai.github.io/tuxedo-portfolio-page/)
 
 Credits
 
