@@ -10,7 +10,7 @@ NA
 
 Usage
 
-The site displays correctly on iPhone SE, surface pro tablet and wide display screen. Screenshots of deployed site are below. There is an issue with landscspe view on mobile phone. iPad view behaves as expected either in portrait or landscape.
+The site displays correctly on iPhone SE, surface pro tablet and wide display screen. Screenshots of deployed site are below. iPad view behaves as expected either in portrait or landscape.
 
 ## mobile view:
 
