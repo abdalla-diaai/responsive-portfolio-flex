@@ -74,7 +74,7 @@ h4 {
 p {
     font-size: 16px;
     text-align: left;
-    padding: 20px;
+    padding: 10px;
     overflow-wrap: break-word;
     line-height: 1.25;
 }
@@ -179,12 +179,18 @@ enlarge background on hover */
 
 .section-text {
     margin-block-start: 50px;
-}
-
-#form-text,
-.section-text {
     background-color: rgba(255, 255, 255, 0.7);
     border-bottom: 5px solid grey;
+    position: relative;
+    padding: 5%;
+    max-width: 70%;
+    max-height: 70%;
+    z-index: 100;
+    margin-inline-start: 15%;
+    text-align: center;
+}
+
+#form-text {
     position: relative;
     padding: 5%;
     max-width: 70%;
@@ -289,6 +295,13 @@ footer p {
     #profile-image {
         max-width: 40%;
     }
+
+    #form-text {
+
+        background-color: rgba(255, 255, 255, 0.7);
+        border-bottom: 5px solid grey;
+
+    }
 }
 
 /* laptop and larger screens */
@@ -319,5 +332,12 @@ footer p {
     p,
     li a {
         font-size: 2rem;
+    }
+
+    #form-text {
+
+        background-color: rgba(255, 255, 255, 0.7);
+        border-bottom: 5px solid grey;
+
     }
 }
