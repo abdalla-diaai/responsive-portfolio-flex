@@ -12,15 +12,15 @@ Usage
 
 The site displays correctly on iPhone SE, surface pro tablet and wide display screen. Screenshots of deployed site are below. 
 
-##mobile view:
+## mobile view:
 
 ![iPhone SE](https://github.com/abdalla-diaai/responsive-portfolio-flex/assets/56742529/dcdc7866-b251-4696-85c7-8b00b6518d53)
 
-##tablet view: 
+## tablet view: 
 
 ![surface-pro-tablet](https://github.com/abdalla-diaai/responsive-portfolio-flex/assets/56742529/de5d89f8-ad88-40de-95af-a3fbd3913f0a)
 
-##desktop view: 
+## desktop view: 
 
 ![wide-screen-display](https://github.com/abdalla-diaai/responsive-portfolio-flex/assets/56742529/5921a8cd-4c11-4a12-b86f-aea469e60f65)
 
